@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>PARKING BOOKING SYSTEM</title>
+
+    <style>
+        /* Additional CSS for layout */
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .foo-content {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .foo-content img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .gtrans {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .translate {
+            display: inline-block;
+        }
+
+        #google_translate_element {
+            display: inline-block;
+        }
+
+        .circle-container {
+            text-align: center;
+        }
+
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 8px solid #3498db; /* Outer color */
+            border-top: 8px solid #e74c3c; /* Inner color */
+            border-radius: 50%;
+            margin: 50px auto;
+        }
+
+        .text-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .car-icon {
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            font-size: 24px;
+            animation: moveCar 3s linear forwards;
+        }
+
+        @keyframes moveCar {
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        .text {
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- head section start -->
+    <header>
+        <a href="#" class="logo">BOOK YOUR SLOT!</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="Register.html" target="blank">Register</a></li>
+                <li><a href="login.html" target="blank">Login</a></li>
+                <li><a href="#trans">Translate</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="fas fa-bars"></div>
+        <button onclick="toggleMode()">MODE</button>
+    </header>
+
+    <!-- head section ends -->
+    <section class="home" id="home">
+        <div class="container">
+            <!-- Circle with text and moving car icon -->
+            <div class="circle-container">
+                <div class="circle">
+                    <div class="text-container">
+                        <div class="car-icon"><i class="bi bi-car"></i></div>
+                        <div class="text">THE SPARTANS<br>EASY PARK HUB</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel on the right side -->
+            <div id="demo" class="carousel slide">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <!-- Add more indicators as needed -->
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets\img\car.jpg">
+                    </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets\img\Car-Logo-Designs.jpg">
+                    </div>
+                    <!-- Add more carousel items with images as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="steps section container" id="info">
+        <div class="steps__bg">
+            <h1 class="section_title-center steps_title">TYPE OF VEHICLE</h1>
+            <!-- Six Boxes Containing Air Control Content -->
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="course-col">
+                    <h3 class="first">CAR</h3>
+                    <p></p>
+                </div>
+                <!-- Box 2 -->
+                <div class="course-col">
+                    <h3 class="second">MOTOR BIKE</h3>
+                    <p></p>
+                </div>
+                <!-- Box 3 -->
+                <div class="course-col">
+                    <h3 class="">SCOOTER</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Start -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="main-txt">
+                <h1>About <span>Us</span></h1>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-6 py-3 py-md-0">
+                    <div class="card">
+                        <img src="assets\img\pngtree-parked-cars-in-a-parking-lot-picture-image_2482279.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6 py-3 py-md-0">
+                    <h2>Advanced Vehicle Parking System</h2>
+                    <p>Introducing SmartPark, your go-to parking companion, combines cutting-edge technology with 
+                        user-friendly design to redefine urban parking. With real-time parking availability showcased through seamless Google Maps integration, SmartPark allows users to effortlessly discover, book, and navigate to parking spaces. The application's intuitive interface simplifies the booking process, providing turn-by-turn navigation, payment integration, and personalized features like parking history and favorites. SmartPark leverages Google Maps' live traffic updates and geofencing alerts, ensuring users stay informed and experience stress-free parking. Experience the future of urban mobility with SmartPark — where finding a parking spot is as easy as a tap on your smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="foo-content">
+            <img style="width: 150px; height: 150px; margin-left: 60px; margin-top: 25px;" src="assets\img\unnamed.jpg">
+        </div>
+        <div class="foo-content">
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="terms.html">Terms & Condition</a></p>
+        </div>
+        <div class="foo-content">
+            <p>Ph no: 9876543210</p>
+            <p>Email:thespartans@psnacet.edu.in</p>
+            <p></p>
+        </div>
+        <div class="foo-content">
+            <!-- Additional content in the fourth column if needed -->
+        </div>
+    </div>
+
+    <!-- Translate Section -->
+    <div class="gtrans" id="trans">
+        <div class="translate">
+            <h4>Translate</h4>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Your existing JavaScript code
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="assets/js/firebaase.js"></script>
+    <script src="assets/js/jq.js"></script>
+
+    <script>
+        // Function to toggle between dark mode and bright mode
+        function toggleMode() {
+            const body = document.body;
+    
+            // Toggle the 'dark-mode' class on the body
+            body.classList.toggle('dark-mode');
+    
+            // Check if dark mode is applied, and set a cookie or local storage variable to remember the mode
+            if (body.classList.contains('dark-mode')) {
+                // Save dark mode state (e.g., using localStorage)
+                localStorage.setItem('mode', 'dark');
+            } else {
+                // Save bright mode state (e.g., using localStorage)
+                localStorage.setItem('mode', 'bright');
+            }
+        }
+        // Check the initial mode from localStorage and apply it
+        const savedMode = localStorage.getItem('mode');
+        if (savedMode === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+

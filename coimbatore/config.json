@@ -1,0 +1,6 @@
+{
+    "mangodb_conection_string":"mongodb://swathi:Swathika04%40.@mongodb.selfmade.ninja:27017/?authSource=users",
+    "mongodb_database":"swathi_Mydb",
+    "secret_key": "Vr4d5lvRh5j6FJ5Cmbzm"
+
+}
