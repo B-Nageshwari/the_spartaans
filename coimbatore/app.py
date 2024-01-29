@@ -4,7 +4,7 @@ sys.path.append('/home\swathika\Desktop\coimbatore')
 from flask import Flask,send_from_directory
 from flask import Flask, redirect, url_for, request, render_template, session
 from src import get_config
-from blueprints import home,api
+from blueprints import home, api
 
 application = app = Flask(__name__, static_folder='assets', static_url_path="/")
 app.secret_key = get_config("secret_key")

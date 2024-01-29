@@ -60,7 +60,7 @@
 </head>
 <body>
     <h1>REGISTER</h1>
-    <form action="/register" method="post">
+    <form action="api/register" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -83,23 +83,9 @@
 
         <button type="submit">Register</button>
         <div class="login-link">
-            <a href="login.html">Already registered? Login!</a>
+            <a href="/login">Already registered? Login!</a>
         </div>
     </form>
-
-    <script>
-        function validateForm() {
-            var password = document.getElementById("password").value;
-            var verifyPassword = document.getElementById("verifyPassword").value;
-
-            if (password !== verifyPassword) {
-                alert("Passwords do not match. Please verify your password.");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
 </body>
 </html>
 

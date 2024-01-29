@@ -78,7 +78,7 @@
 </head>
 <body>
     <h1>LOGIN</h1>
-    <form>
+    <form action="/api/login" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -89,12 +89,6 @@
         <div class="forgot-password">
             <a href="forget-password.html">Forget Password?</a>
         </div>
-        <script>
-            // JavaScript function to handle redirection
-            function redirectToForgetPassword() {
-                window.location.href = 'forget-password.html';
-            }
-        </script>
     </form>
 </body>
 </html>

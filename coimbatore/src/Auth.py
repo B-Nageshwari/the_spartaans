@@ -25,10 +25,6 @@ class Auth:
         user = users_collection.find_one({"username": username})
 
         if user:
-            # Check if the user is active
-            if user.get('active') != 1:
-                return "User not activated"
-
             # Check if the passwords match
             if password == user['password']:
                 session['authenticated'] = True
