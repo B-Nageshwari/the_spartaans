@@ -41,6 +41,23 @@ def login():
             return redirect(url_for('home.maps'))
         else:
             return str(result)
+        
+@api.bp.route("/register", methods=['POST'])
+def login():
+    if 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        vehicleNumber = request.form['vehicleNumber']
+        vehicleType = request.form['vehicleType']
+
+        result = Auth.register(username, password,vehicleNumber,vehicleType)
+        if result == "Registration successful":
+            # Set a session variable or cookie to track the authenticated user
+            session['authenticated'] = True
+            # Redirect to the maps page
+            return redirect(url_for('home.maps'))
+        else:
+            return str(result)
 
 # Run the application
 if __name__ == '__main__':

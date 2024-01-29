@@ -10,13 +10,13 @@ users_collection = db.auth
 
 class Auth:
     @staticmethod
-    def register(username, password,email,phone,message):
+    def register(username, password,vehicleType,vehicleNumber):
         # Check if user already exists
         if users_collection.find_one({"username": username}):
             return "User already exists"
 
         # Insert new user into the database
-        users_collection.insert_one({"username": username, "password": password,"email":email,"phone":phone,"message":message,"active": 0})
+        users_collection.insert_one({"username": username, "password": password,"vehicleType":vehicleType,"vehicleNumber":vehicleNumber})
         return "Registration successful"
 
     @staticmethod

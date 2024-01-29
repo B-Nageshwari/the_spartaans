@@ -60,7 +60,7 @@
 </head>
 <body>
     <h1>REGISTER</h1>
-    <form onsubmit="return validateForm()">
+    <form action="/register">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -88,17 +88,6 @@
     </form>
 
     <script>
-        function validateForm() {
-            var password = document.getElementById("password").value;
-            var verifyPassword = document.getElementById("verifyPassword").value;
-
-            if (password !== verifyPassword) {
-                alert("Passwords do not match. Please verify your password.");
-                return false;
-            }
-
-            return true;
-        }
         function validateForm() {
             var password = document.getElementById("password").value;
             var verifyPassword = document.getElementById("verifyPassword").value;
