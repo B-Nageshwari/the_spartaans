@@ -1,7 +1,7 @@
 import json
 
 def get_config(key):
-    config_file = "/home\swathika\Desktop\coimbatore\config.json" 
+    config_file = "\home\swathika\Desktop\coimbatore\config.json" 
     file = open(config_file, "r")
     config = json.loads(file.read())
     file.close()

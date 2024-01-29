@@ -1,5 +1,5 @@
 {
-    "mangodb_conection_string":"mongodb://swathi:Swathika04%40.@mongodb.selfmade.ninja:27017/?authSource=users",
+    "mangodb_conection_string":"mongodb+srv://venkateshvenki404224:Qwertyuiop%40123@cluster0.uzf3psm.mongodb.net/",
     "mongodb_database":"swathi_Mydb",
     "secret_key": "Vr4d5lvRh5j6FJ5Cmbzm"
 
